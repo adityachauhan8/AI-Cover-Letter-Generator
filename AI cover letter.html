@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Cover Letter Generator</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <script src=""></script>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/acd72e71-41bf-4250-a062-50cc84aad799.png" alt="AI Cover Letter Generator logo featuring a modern, professional design with document and AI elements in blue and white color scheme" />
+            </div>
+            <h1>AI Cover Letter Generator</h1>
+            <p>Create professional, tailored cover letters in minutes with our AI-powered tool. Perfect for job applications, internships, and career opportunities.</p>
+        </header>
+
+        <div class="main-content">
+            <section class="input-section">
+                <h2>Your Information</h2>
+                <form id="coverLetterForm">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" placeholder="Rahul" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Rahul@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" placeholder="+91 900XX048">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="text" id="address" placeholder="123 Main St, City, State ZIP">
+                    </div>
+
+                    <h2>Job Details</h2>
+                    <div class="form-group">
+                        <label for="jobTitle">Job Title You're Applying For</label>
+                        <input type="text" id="jobTitle" placeholder="Software Engineer" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="companyName">Company Name</label>
+                        <input type="text" id="companyName" placeholder="XYZ Inc." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hiringManager">Hiring Manager Name (if known)</label>
+                        <input type="text" id="hiringManager" placeholder="Mr Anirudh">
+                    </div>
+                    <div class="form-group">
+                        <label for="jobLocation">Job Location</label>
+                        <input type="text" id="jobLocation" placeholder="Banglore">
+                    </div>
+
+                    <h2>Your Qualifications</h2>
+                    <div class="form-group">
+                        <label for="skills">Key Skills (comma separated)</label>
+                        <input type="text" id="skills" placeholder="JavaScript, React, Node.js, Problem Solving">
+                    </div>
+                    <div class="form-group">
+                        <label for="experience">Years of Experience</label>
+                        <select id="experience" required>
+                            <option value="">Select</option>
+                            <option value="0-1">0-1 years</option>
+                            <option value="1-3">1-3 years</option>
+                            <option value="3-5">3-5 years</option>
+                            <option value="5+">5+ years</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="achievements">Notable Achievements</label>
+                        <textarea id="achievements" placeholder="Describe your key achievements relevant to this position..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="connection">Connection to Company (if any)</label>
+                        <textarea id="connection" placeholder="How you know about the company or why you want to work there..."></textarea>
+                    </div>
+
+                    <button type="submit" id="generateBtn">Generate Cover Letter</button>
+                    <div class="error-message" id="errorMessage"></div>
+                </form>
+                <div class="loading" id="loadingIndicator">
+                    <div class="spinner"></div>
+                    <p>AI is crafting your perfect cover letter...</p>
+                </div>
+            </section>
+
+            <section class="output-section">
+                <h2>Your Cover Letter</h2>
+                <div class="letter-preview" id="letterPreview">
+                    <p>Your AI-generated cover letter will appear here.</p>
+                    <p>Fill out the form and click "Generate Cover Letter" to create a tailored cover letter for your job application.</p>
+                </div>
+                <div class="action-buttons">
+                    <button id="downloadBtn" class="secondary" disabled>Download as PDF</button>
+                    <button id="copyBtn" class="secondary" disabled>Copy to Clipboard</button>
+                </div>
+                <div class="success-message" id="successMessage"></div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
